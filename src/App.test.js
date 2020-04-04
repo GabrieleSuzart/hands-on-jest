@@ -1,9 +1,20 @@
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import App from './App'
+
+// it('should render withut crashing', () => {
+//   const div = document.createElement('div')
+//   ReactDOM.render(<App/>, div)
+// });
+
+// ---------------------------------------------------
+
 import React from 'react';
-import { render } from '@testing-library/react';
+import { mount } from 'enzyme';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+  it('renders without crashing', () => {
+    mount(<App />);
+  });
+})
